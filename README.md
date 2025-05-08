@@ -70,17 +70,29 @@ O frontend estará disponível em: http://localhost:4200
 ---
 
 ### 🛠️ Tecnologias Utilizadas
-Frontend
+
+### Frontend:
+
 Angular
-PrimeNG
+
+PrimeNG 
+
 TailwindCSS
+
 Notyf (notificações)
 
-Backend
+
+
+### Backend:
+
 Java 17
+
 Spring Boot
+
 Spring Web
+
 Spring Data JPA
+
 Banco H2 (em memória)
 
 ---
