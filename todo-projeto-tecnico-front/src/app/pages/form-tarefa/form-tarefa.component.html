@@ -29,7 +29,7 @@
     </div>
     <div class="flex flex-col gap-1 mb-4">
       <label for="dataPrevistaConclusao">Previsão</label>
-      <p-datepicker formControlName="dataPrevistaConclusao" showIcon="true" />
+      <p-datepicker formControlName="dataPrevistaConclusao" showIcon="true" dateFormat="dd/mm/yy"/>
       <p 
       *ngIf="tarefaForm.get('dataPrevistaConclusao')?.touched && tarefaForm.get('dataPrevistaConclusao')?.errors?.['dataInvalida']"
       class="text-red-500 text-sm mt-1"
