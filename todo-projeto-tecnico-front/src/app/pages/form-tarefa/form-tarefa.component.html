@@ -45,8 +45,11 @@
       <label for="situacao">Situação</label>
       <input type="text" pInputText formControlName="situacao" />
     </div>
-  
-    <p-button type="submit" label="Salvar" icon="pi pi-save" iconPos="left"></p-button>
+    <div class="flex gap-1 mb-4">
+
+      <p-button type="submit" label="Salvar" icon="pi pi-save" iconPos="left"></p-button>
+      <p-button (click)="returnToList()" label="Voltar" icon="pi pi-undo" iconPos="left"></p-button>
+    </div>
   </form>
 </div>
   

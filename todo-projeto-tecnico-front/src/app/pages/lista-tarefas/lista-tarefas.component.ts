@@ -120,6 +120,17 @@ export class ListaTarefasComponent {
     });
   }
   
+  excluirTarefa(tarefaId: string) {
+    this.tarefaService.excluir(tarefaId).subscribe({
+      next: (res) => {
+        this.notificacaoService.success('Tarefa excluída com sucesso!');
+        this.aplicarFiltros()
+      },
+      error: (error) => {
+        this.notificacaoService.error('Erro ao excluir a tarefa.');
+      }
+    })
+  };
 
 
   prioridadeSeverity(tarefa: Tarefa){

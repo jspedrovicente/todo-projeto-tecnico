@@ -52,6 +52,7 @@
         <th pSortableColumn="nome">Nome <p-sortIcon field="nome" /></th>
         <th pSortableColumn="prioridade">Prioridade <p-sortIcon field="prioridade" /></th>
         <th pSortableColumn="situacao">Situação <p-sortIcon field="situacao" /></th>
+        <th pSortableColumn="dataPrevistaConclusao">Previsão Conclusão <p-sortIcon field="dataPrevistaConclusao" /></th>
         <th>Ações</th>
       </tr>
     </ng-template>
@@ -62,12 +63,14 @@
             <p-badge [value]="tarefa.prioridade" [severity]="prioridadeSeverity(tarefa)" />
         </td>
         <td>{{ tarefa.situacao }}</td>
+        <td>{{ tarefa.dataPrevistaConclusao | date:'dd/MM/yyyy' }}</td>
         <td>
             <div class="flex space-x-2">
 
                 <button pButton icon="pi pi-pencil" label="Editar" (click)="editarTarefa(tarefa.id)"></button>
                 <button *ngIf="tarefa.situacao === 'ABERTA' || tarefa.situacao === 'PENDENTE'" pButton icon="pi pi-check" label="Concluir" (click)="concluirTarefa(tarefa.id)"></button>
                 <button *ngIf="tarefa.situacao === 'CONCLUIDA'" pButton icon="pi pi-exclamation-triangle" label="Pendente" (click)="pendenteTarefa(tarefa.id)"></button>
+                <button pButton icon="pi pi-trash" label="Excluir" (click)="excluirTarefa(tarefa.id)"></button>
             </div>
           
         </td>

@@ -17,18 +17,10 @@ A aplicação foi desenvolvida com **Angular** no frontend e **Spring Boot** no 
 
 ### ▶️ 1. Rodando o Backend (Spring Boot + H2)
 
-No Terminal (RECOMENDADO):
 ```bash
 cd todo-projeto-tecnico-backend
 cd todo-backend
 ./mvnw spring-boot:run
-```
-No IDE:
-```bash
-Abrir o IDE
-Selecionar a pasta todo-projeto-tecnico-backend
-Carregar o Maven
-ir para: todo-backend/src/main/java/com.example.todo_backend/TodoBackendApplication e rodar o Main
 ```
 
 O banco em memoria estará disponível em: http://localhost:8080/h2-console

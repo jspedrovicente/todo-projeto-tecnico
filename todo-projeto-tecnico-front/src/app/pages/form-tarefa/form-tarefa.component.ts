@@ -71,6 +71,10 @@ export class FormTarefaComponent implements OnInit {
     return inputDate >= today ? null : { dataInvalida: true };
   }
 
+  returnToList() {
+    this.router.navigate(['']);
+
+  }
   onSubmit() {
     if (this.tarefaForm.valid) {
       const tarefa = this.tarefaForm.getRawValue();
