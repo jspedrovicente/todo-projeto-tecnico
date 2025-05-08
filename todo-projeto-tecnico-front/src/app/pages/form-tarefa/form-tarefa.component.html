@@ -1,0 +1,52 @@
+<div class="flex-col min-h-screen p-4 items-center flex">
+    <h2 class="main-title text-4xl font-semibold text-blue-500 mb-6">Painel To-Do</h2>
+
+
+    <form [formGroup]="tarefaForm" (ngSubmit)="onSubmit()" class="tarefa-form w-full sm:w-1/2">
+
+  
+    <div class="flex flex-col gap-1 mb-4">
+      <label for="nome">Nome</label>
+      <input type="text" pInputText formControlName="nome" />
+        <p 
+        *ngIf="tarefaForm.get('nome')?.touched && tarefaForm.get('nome')?.invalid"
+        class="text-red-500 text-sm mt-1"
+        >
+        *O campo Nome não pode ficar vazio
+        </p>
+    </div>
+    <div class="flex flex-col gap-1 mb-4">
+        <label for="prioridade">Prioridade</label>
+
+        <p-select 
+        [options]="prioridades" 
+        formControlName="prioridade" 
+        optionLabel="nome" 
+        optionValue="valor"
+        placeholder="Prioridade" 
+        class="filter-select w-full"
+        />
+    </div>
+    <div class="flex flex-col gap-1 mb-4">
+      <label for="dataPrevistaConclusao">Previsão</label>
+      <p-datepicker formControlName="dataPrevistaConclusao" showIcon="true" />
+      <p 
+      *ngIf="tarefaForm.get('dataPrevistaConclusao')?.touched && tarefaForm.get('dataPrevistaConclusao')?.errors?.['dataInvalida']"
+      class="text-red-500 text-sm mt-1"
+    >
+      * A data não pode ser anterior à data atual.
+    </p>
+    </div>
+    <div class="flex flex-col gap-1 mb-4">
+      <label for="descricao">Descrição</label>
+      <input type="text" pInputText formControlName="descricao" />
+    </div>
+    <div class="flex flex-col gap-1 mb-4">
+      <label for="situacao">Situação</label>
+      <input type="text" pInputText formControlName="situacao" />
+    </div>
+  
+    <p-button type="submit" label="Salvar" icon="pi pi-save" iconPos="left"></p-button>
+  </form>
+</div>
+  

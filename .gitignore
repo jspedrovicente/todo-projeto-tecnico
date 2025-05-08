@@ -1,0 +1,43 @@
+# Root
+*.log
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# OS
+*.swp
+
+# Frontend (Angular)
+todo-projeto-tecnico-front/node_modules/
+todo-projeto-tecnico-front/dist/
+todo-projeto-tecnico-front/.angular/
+todo-projeto-tecnico-front/.angular-cache/
+todo-projeto-tecnico-front/.env*
+
+# Backend (Java)
+todo-projeto-tecnico-backend/target/
+todo-projeto-tecnico-backend/.classpath
+todo-projeto-tecnico-backend/.project
+todo-projeto-tecnico-backend/.settings/
+todo-projeto-tecnico-backend/.env*
+
+# Maven
+**/target/
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Gradle (if you're using it)
+**/.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
+build/

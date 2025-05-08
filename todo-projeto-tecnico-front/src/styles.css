@@ -1,0 +1,27 @@
+
+@import "primeicons/primeicons.css";
+@import "tailwindcss";
+@import 'notyf/notyf.min.css';
+
+/* You can add global styles to this file, and also import other style files */
+.main-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notyf__toast {
+    background-color: rgba(90, 79, 79, 0.95) !important; /* or any color you want */
+    color: white !important;
+    border-radius: 0.375rem; /* Tailwind md rounded */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  
+  .notyf__message {
+    color: white !important;
+    font-weight: 500;
+  }
+  
+  .notyf__icon {
+    fill: white !important;
+  }
