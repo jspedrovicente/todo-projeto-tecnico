@@ -20,7 +20,7 @@ A aplicação foi desenvolvida com **Angular** no frontend e **Spring Boot** no 
 No Terminal (RECOMENDADO):
 ```bash
 cd todo-projeto-tecnico-backend
-cd todo-backendT
+cd todo-backend
 ./mvnw spring-boot:run
 ```
 No IDE:
