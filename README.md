@@ -26,7 +26,7 @@ cd todo-backend
 O banco em memoria estará disponível em: http://localhost:8080/h2-console
 
 Credenciais para o H2:
-JDBC URL: jdbc:h2:mem:testdb
+JDBC URL: jdbc:h2:mem:todo-projeto-tecnico-database
 Usuário: sa
 Senha: (deixe em branco)
 
